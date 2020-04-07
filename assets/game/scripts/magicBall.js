@@ -14,6 +14,7 @@ cc.Class({
         this.node.on('touchend', this.onTouchEnd, this);
         this.node.on('touchcancel', this.onTouchEnd, this);
         this.worldPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO);
+        this.selectPanel = this.node.parent.getChildByName('selectPanel');
         if (this.node.parent.group == 'bagItem') this.bagScrollView = this.node.parent.parent.parent.parent.parent.getComponent(cc.ScrollView);
     },
 
@@ -44,17 +45,17 @@ cc.Class({
     },
 
     onTouchStart(event) {
-        event.stopPropagation();
         cc.log('touchstart');
-        this.isMove = false;
         this.startPos = event.getLocation();
-        if (this.copyItem != null) return;
-        this.copyItem = cc.instantiate(this.node);
-        this.copyItem.opacity = 0;
-        this.copyItem.zIndex = -1;
         this.copyPos = rootNode.convertToNodeSpaceAR(this.worldPos);
+        if (this.copyItem != null) {
+            this.copyItem.setPosition(this.copyPos);
+            return;
+        }
+        this.copyItem = cc.instantiate(this.node);
+        this.copyItem.opacity = 100;
+        this.copyItem.active = false;
         rootNode.addChild(this.copyItem);
-        this.copyItem.setPosition(this.copyPos);
         this.copyItem.group = 'copyItem';
         this.copyItem.on('touchmove', this.copyItemMove, this);
         this.copyItem.on('touchend', this.onTouchEnd, this);
@@ -62,36 +63,38 @@ cc.Class({
     },
 
     copyItemMove(event) {
-        event.stopPropagation();
-        if (this.node.parent.group == 'bagItem') this.bagScrollView.vertical = false;
+        if (this.node.parent.group == 'bagItem') {
+            this.bagScrollView.vertical = false;
+            this.selectPanel.active = false;
+        }
         cc.log('touchmove');
-        this.isMove = true;
         if (this.copyItem == null) return;
         let movePos = event.getLocation();
         let dis = this.startPos.sub(movePos).mag();
         this.copyItem.setPosition(this.copyItem.x + event.getDeltaX(), this.copyItem.y + event.getDeltaY());
         if (dis <= 20) return;
-        this.copyItem.opacity = 100;
-        this.copyItem.zIndex = 1;
+        this.copyItem.active = true;
     },
 
     onTouchEnd(event) {
-        event.stopPropagation();
         if (this.node.parent.group == 'bagItem') this.bagScrollView.vertical = true;
         cc.log('touchend');
-        if (this.isMove == false) this.onClick();
+        let movePos = event.getLocation();
+        let dis = this.startPos.sub(movePos).mag();
+        if (dis <= 20) this.onClick();
         if (this.copyItem == null) return;
-        this.copyItem.zIndex = -1;
-        this.copyItem.opacity = 0;
+        this.copyItem.active = false;
         this.copyItem.setPosition(this.copyPos);
     },
 
-    deleteClick() {
+    deleteItem() {
         if (this.copyItem != null) this.copyItem.destroy();
         this.node.parent.parent.destroy();
     },
 
     onClick() {
-        this.deleteClick();
+        if (this.node.parent.group != 'bagItem') return;
+        this.selectPanel.active = true;
+        this.node.getComponent(cc.AudioSource).play();
     }
 });

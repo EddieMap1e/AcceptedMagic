@@ -2,7 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-
+        buttonAudio: cc.AudioSource,
     },
 
     start() {
@@ -11,5 +11,6 @@ cc.Class({
 
     onClick() {
         this.node.parent.active = false;
+        this.buttonAudio.play();
     },
 });
