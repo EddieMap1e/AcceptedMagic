@@ -2,17 +2,17 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        buttonAudio: cc.AudioSource,
+        clickAudio:cc.AudioSource,
     },
 
-    start() {
+    start () {
 
     },
 
-    onClick() {
-        this.node.parent.active = false;
-        this.buttonAudio.play();
+    onClick(){
+        this.clickAudio.play();
         topNodeZIndex = (topNodeZIndex + 1) % 999999;
         this.node.parent.zIndex = topNodeZIndex;
-    },
+        cc.log('judge');
+    }
 });

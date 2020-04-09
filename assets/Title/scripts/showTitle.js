@@ -19,8 +19,6 @@ cc.Class({
     },
 
     start() {
-        if (cc.sys.localStorage.getItem('FIRSTPLAY') == null)
-            cc.sys.localStorage.setItem('FIRSTPLAY', 'YES');
         let afterShowTitle1 = cc.callFunc(() => {
             this.showTitle2();
         }, this);
@@ -42,7 +40,7 @@ cc.Class({
             this.enterFlag = false;
             this.node.on('touchstart', () => {
                 clearInterval(this.enterInterval);
-                if (cc.sys.localStorage.getItem('FIRSTPLAY') == null || cc.sys.localStorage.getItem('FIRSTPLAY') == 'YES') {
+                if (cc.sys.localStorage.getItem('level0') == null || cc.sys.localStorage.getItem('level0') == 0) {
                     cc.sys.localStorage.setItem('BGM', 'STOP');
                     cc.audioEngine.stop(this.bgm);
                     cc.director.loadScene('level0');

@@ -14,5 +14,5 @@ cc.Class({
         this.buttonAudio.play();
         topNodeZIndex = (topNodeZIndex + 1) % 999999;
         this.node.parent.zIndex = topNodeZIndex;
-    },
+    }
 });

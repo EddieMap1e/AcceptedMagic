@@ -12,6 +12,7 @@ cc.Class({
         this.bgm = cc.audioEngine.play(this.bgmAudio, true, 1);
         cc.director.getCollisionManager().enabled = true;
         window.rootNode = this.node;
+        window.topNodeZIndex = 0;
     },
 
     onDestroy() {

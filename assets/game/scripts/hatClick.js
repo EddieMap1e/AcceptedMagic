@@ -13,5 +13,9 @@ cc.Class({
     onClick() {
         this.clickAudio.play();
         this.bagNode.active = !this.bagNode.active;
+        if (this.bagNode.active) {
+            topNodeZIndex = (topNodeZIndex + 1) % 999999;
+            this.bagNode.zIndex = topNodeZIndex;
+        }
     }
 });

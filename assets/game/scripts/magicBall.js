@@ -22,8 +22,9 @@ cc.Class({
         this.worldPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO);
     },
 
-    init() {
-        this.number = this.getRandomNumber(0, 10);
+    init(n = null) {
+        if (n === null) this.number = this.getRandomNumber(0, 10);
+        else this.number = n;
         this.setNumber(this.number);
         let R = this.getRandomNumber(50, 233);
         let G = this.getRandomNumber(50, 233);
@@ -74,6 +75,7 @@ cc.Class({
         this.copyItem.setPosition(this.copyItem.x + event.getDeltaX(), this.copyItem.y + event.getDeltaY());
         if (dis <= 20) return;
         this.copyItem.active = true;
+        this.copyItem.zIndex = topNodeZIndex + 1;
     },
 
     onTouchEnd(event) {
