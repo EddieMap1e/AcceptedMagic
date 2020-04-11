@@ -2,8 +2,9 @@
   "group-list": [
     "default",
     "copyItem",
-    "itemBox",
-    "bagItem"
+    "submitBox",
+    "bagItem",
+    "boxItem"
   ],
   "collision-matrix": [
     [
@@ -20,6 +21,13 @@
       false
     ],
     [
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
       false,
       false,
       false,
@@ -81,5 +89,6 @@
     "live": {
       "enable": false
     }
-  }
+  },
+  "start-scene": "current"
 }

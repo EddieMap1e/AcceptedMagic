@@ -3,14 +3,19 @@ cc.Class({
 
     properties: {
         clickAudio: cc.AudioSource,
+        calcNode: cc.Node,
     },
 
-    start () {
+    start() {
 
     },
 
-    onClick(){
+    onClick() {
         this.clickAudio.play();
-        cc.log('book被点击了');
+        this.calcNode.active = !this.calcNode.active;
+        if (this.calcNode.active) {
+            topNodeZIndex = (topNodeZIndex + 1) % 999999;
+            this.calcNode.zIndex = topNodeZIndex;
+        }
     }
 });

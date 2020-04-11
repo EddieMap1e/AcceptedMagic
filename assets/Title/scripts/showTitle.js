@@ -15,7 +15,6 @@ cc.Class({
 
     onLoad() {
         this.bgm = cc.audioEngine.play(this.bgmAudio, true, 1);
-        cc.sys.localStorage.setItem('BGM', 'PLAY');
     },
 
     start() {
@@ -40,9 +39,8 @@ cc.Class({
             this.enterFlag = false;
             this.node.on('touchstart', () => {
                 clearInterval(this.enterInterval);
+                cc.audioEngine.stop(this.bgm);
                 if (cc.sys.localStorage.getItem('level0') == null || cc.sys.localStorage.getItem('level0') == 0) {
-                    cc.sys.localStorage.setItem('BGM', 'STOP');
-                    cc.audioEngine.stop(this.bgm);
                     cc.director.loadScene('level0');
                 } else {
                     cc.director.loadScene('select');

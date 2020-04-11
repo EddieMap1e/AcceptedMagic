@@ -7,7 +7,7 @@ cc.Class({
     },
 
     start() {
-        if (this.node.group == 'copyItem') return;
+        if (this.node.group == 'copyItem' || this.node.group == 'boxItem') return;
         this.copyItem = null;
         this.node.on('touchstart', this.onTouchStart, this);
         this.node.on('touchmove', this.copyItemMove, this);
@@ -46,7 +46,6 @@ cc.Class({
     },
 
     onTouchStart(event) {
-        cc.log('touchstart');
         this.startPos = event.getLocation();
         this.copyPos = rootNode.convertToNodeSpaceAR(this.worldPos);
         if (this.copyItem != null) {
@@ -54,13 +53,16 @@ cc.Class({
             return;
         }
         this.copyItem = cc.instantiate(this.node);
+        this.copyItem.group = 'copyItem';
         this.copyItem.opacity = 100;
         this.copyItem.active = false;
         rootNode.addChild(this.copyItem);
-        this.copyItem.group = 'copyItem';
         this.copyItem.on('touchmove', this.copyItemMove, this);
         this.copyItem.on('touchend', this.onTouchEnd, this);
         this.copyItem.on('touchcancel', this.onTouchEnd, this);
+        this.copyItem.on('touchend', this.copyItemEnd, this.copyItem);
+        this.node.on('touchend', this.copyItemEnd, this.copyItem);
+        this.node.on('touchcancel', this.copyItemEnd, this.copyItem);
     },
 
     copyItemMove(event) {
@@ -68,7 +70,6 @@ cc.Class({
             this.bagScrollView.vertical = false;
             this.selectPanel.active = false;
         }
-        cc.log('touchmove');
         if (this.copyItem == null) return;
         let movePos = event.getLocation();
         let dis = this.startPos.sub(movePos).mag();
@@ -80,7 +81,6 @@ cc.Class({
 
     onTouchEnd(event) {
         if (this.node.parent.group == 'bagItem') this.bagScrollView.vertical = true;
-        cc.log('touchend');
         let movePos = event.getLocation();
         let dis = this.startPos.sub(movePos).mag();
         if (dis <= 20) this.onClick();
@@ -98,5 +98,20 @@ cc.Class({
         if (this.node.parent.group != 'bagItem') return;
         this.selectPanel.active = true;
         this.node.getComponent(cc.AudioSource).play();
-    }
+    },
+
+    onCollisionEnter(other, self) {
+        this.node.collisionName = other.node.group;
+    },
+
+    onCollisionExit(other, self) {
+        setTimeout(()=>{
+            this.node.collisionName = undefined;
+        },200);
+    },
+
+    copyItemEnd() {
+        if (this.collisionName == undefined) return;
+        if (this.collisionName == 'submitBox') rootNode.getChildByName('submit').getChildByName('itemBG').getComponent('submitItem').setItem(this);
+    },
 });
