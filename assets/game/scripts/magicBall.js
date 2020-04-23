@@ -9,6 +9,7 @@ cc.Class({
     start() {
         if (this.node.group == 'copyItem' || this.node.group == 'boxItem') return;
         this.copyItem = null;
+        this.node.collisionNode = null;
         this.node.on('touchstart', this.onTouchStart, this);
         this.node.on('touchmove', this.copyItemMove, this);
         this.node.on('touchend', this.onTouchEnd, this);
@@ -101,17 +102,17 @@ cc.Class({
     },
 
     onCollisionEnter(other, self) {
-        this.node.collisionName = other.node.group;
+        this.node.collisionNode = other.node;
     },
 
     onCollisionExit(other, self) {
-        setTimeout(()=>{
-            this.node.collisionName = undefined;
-        },200);
+        setTimeout(() => {
+            this.node.collisionNode = null;
+        }, 200);
     },
 
     copyItemEnd() {
-        if (this.collisionName == undefined) return;
-        if (this.collisionName == 'submitBox') rootNode.getChildByName('submit').getChildByName('itemBG').getComponent('submitItem').setItem(this);
+        if (this.collisionNode == null) return;
+        if (this.collisionNode.group == 'submitBox') this.collisionNode.getComponent('submitItem').setItem(this);
     },
 });

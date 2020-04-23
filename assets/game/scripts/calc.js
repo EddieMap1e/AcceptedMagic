@@ -17,42 +17,82 @@ cc.Class({
     },
 
     myAdd() {
-        cc.log('add');
         this.buttonAudio.play();
+        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
+        rootNode.getChildByName('oper2').setPosition(0, 0);
+        rootNode.getChildByName('oper2').active = true;
+        rootNode.getChildByName('oper2').getComponent('oper').changeMode('add');
+        this.node.active = false;
     },
 
     mySub() {
-        cc.log('sub');
         this.buttonAudio.play();
+        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
+        rootNode.getChildByName('oper2').setPosition(0, 0);
+        rootNode.getChildByName('oper2').active = true;
+        rootNode.getChildByName('oper2').getComponent('oper').changeMode('sub');
+        this.node.active = false;
     },
 
     myMul() {
-        cc.log('mul');
         this.buttonAudio.play();
+        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
+        rootNode.getChildByName('oper2').setPosition(0, 0);
+        rootNode.getChildByName('oper2').active = true;
+        rootNode.getChildByName('oper2').getComponent('oper').changeMode('mul');
+        this.node.active = false;
     },
 
     myDiv() {
-        cc.log('div');
         this.buttonAudio.play();
+        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
+        rootNode.getChildByName('oper2').setPosition(0, 0);
+        rootNode.getChildByName('oper2').active = true;
+        rootNode.getChildByName('oper2').getComponent('oper').changeMode('div');
+        this.node.active = false;
     },
 
     myMod() {
-        cc.log('mod');
         this.buttonAudio.play();
+        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
+        rootNode.getChildByName('oper2').setPosition(0, 0);
+        rootNode.getChildByName('oper2').active = true;
+        rootNode.getChildByName('oper2').getComponent('oper').changeMode('mod');
+        this.node.active = false;
     },
 
     myEqual() {
-        cc.log('equal');
         this.buttonAudio.play();
+        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
+        rootNode.getChildByName('oper2').setPosition(0, 0);
+        rootNode.getChildByName('oper2').active = true;
+        rootNode.getChildByName('oper2').getComponent('oper').changeMode('equal');
+        this.node.active = false;
     },
 
     myGt() {
-        cc.log('gt');
         this.buttonAudio.play();
+        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
+        rootNode.getChildByName('oper2').setPosition(0, 0);
+        rootNode.getChildByName('oper2').active = true;
+        rootNode.getChildByName('oper2').getComponent('oper').changeMode('gt');
+        this.node.active = false;
     },
 
     myLt() {
-        cc.log('lt');
         this.buttonAudio.play();
+        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
+        rootNode.getChildByName('oper2').setPosition(0, 0);
+        rootNode.getChildByName('oper2').active = true;
+        rootNode.getChildByName('oper2').getComponent('oper').changeMode('lt');
+        this.node.active = false;
     },
 });

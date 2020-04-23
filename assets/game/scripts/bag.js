@@ -8,13 +8,17 @@ cc.Class({
 
     start() {
         for (let i = 0; i < 20; i++) {
-            let magicBall = cc.instantiate(this.magicBallPrefab);
-            let itemBG = cc.instantiate(this.itemBGPrefab);
-            magicBall.getChildByName('magicball').getComponent('magicBall').init();
-            magicBall.group = 'bagItem';
-            this.node.addChild(itemBG);
-            itemBG.addChild(magicBall);
-            magicBall.setPosition(0,0);
+            this.addMagicBall(null);
         }
+    },
+
+    addMagicBall(number) {
+        let magicBall = cc.instantiate(this.magicBallPrefab);
+        let itemBG = cc.instantiate(this.itemBGPrefab);
+        magicBall.getChildByName('magicball').getComponent('magicBall').init(number);
+        magicBall.group = 'bagItem';
+        this.node.addChild(itemBG);
+        itemBG.addChild(magicBall);
+        magicBall.setPosition(0, 0);
     },
 });

@@ -2,7 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-
+        itemAudio: cc.AudioSource,
     },
 
     start() {
@@ -13,6 +13,7 @@ cc.Class({
     setItem(itemNode) {
         if (this.item != null) this.item.destroy();
         if (itemNode.name == 'magicball') {
+            this.itemAudio.play();
             this.item = cc.instantiate(itemNode);
             this.item.group = 'boxItem';
             this.item.opacity = 255;
@@ -20,7 +21,6 @@ cc.Class({
             this.node.addChild(this.item);
             this.item.setPosition(0, 0);
             this.itemData = this.item.getComponent('magicBall').number;
-            cc.log(this.itemData);
         }
     },
 
