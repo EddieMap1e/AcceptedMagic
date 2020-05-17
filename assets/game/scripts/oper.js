@@ -25,6 +25,7 @@ cc.Class({
         let item2 = item2JS.item;
         if (item1 == null || item2 == null) return;
         cc.log(this.mode);
+        myAddTime(1);
         if (this.mode == 'add') {
             if (item1.name != 'magicball' || item2.name != 'magicball') return;
             let data1 = item1JS.itemData,
@@ -56,13 +57,13 @@ cc.Class({
                 data2 = item2JS.itemData;
             if (data1 == data2) myAlert('哟吼,感知到了这两个魔法球法力值是一样的呢');
             else myAlert('这两个魔法球法力值很不一样呢');
-        }else if(this.mode == 'gt'){
+        } else if (this.mode == 'gt') {
             if (item1.name != 'magicball' || item2.name != 'magicball') return;
             let data1 = item1JS.itemData,
                 data2 = item2JS.itemData;
             if (data1 > data2) myAlert('喔~~ 左边的魔法球能量很强呢');
             else myAlert('诶,左边的魔法球不咋地呀');
-        }else if(this.mode == 'lt'){
+        } else if (this.mode == 'lt') {
             if (item1.name != 'magicball' || item2.name != 'magicball') return;
             let data1 = item1JS.itemData,
                 data2 = item2JS.itemData;

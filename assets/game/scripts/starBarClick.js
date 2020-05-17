@@ -12,5 +12,6 @@ cc.Class({
     onClick() {
         this.clickAudio.play();
         cc.log('starBar被点击了');
+        myTalk();
     }
 });

@@ -32,6 +32,7 @@ cc.Class({
         let B = this.getRandomNumber(50, 233);
         this.color = cc.color(R, G, B);
         this.setColor(this.color);
+        myAddSpace(1);
     },
 
     setColor(color) {
@@ -93,6 +94,7 @@ cc.Class({
     deleteItem() {
         if (this.copyItem != null) this.copyItem.destroy();
         this.node.parent.parent.destroy();
+        mySubSpace(1);
     },
 
     onClick() {
