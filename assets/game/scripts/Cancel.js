@@ -12,7 +12,7 @@ cc.Class({
     onClick() {
         this.node.parent.active = false;
         this.buttonAudio.play();
-        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
         this.node.parent.zIndex = topNodeZIndex;
     },
 });

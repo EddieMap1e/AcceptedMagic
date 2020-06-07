@@ -17,7 +17,7 @@ cc.Class({
         this.clickAudio.play();
         this.submitNode.active = !this.submitNode.active;
         if (this.submitNode.active) {
-            topNodeZIndex = (topNodeZIndex + 1) % 999999;
+            topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
             this.submitNode.zIndex = topNodeZIndex;
         }
     }

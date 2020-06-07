@@ -11,7 +11,7 @@ cc.Class({
 
     onClick() {
         this.clickAudio.play();
-        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
         this.node.parent.zIndex = topNodeZIndex;
         let submitItem = this.node.parent.getChildByName('item').getComponent('submitItem').itemData;
         cc.log(submitItem);

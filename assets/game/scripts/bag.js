@@ -7,9 +7,11 @@ cc.Class({
     },
 
     start() {
-        for (let i = 0; i < 20; i++) {
-            this.addMagicBall(null);
-        }
+
+    },
+
+    onLoad() {
+        
     },
 
     addMagicBall(number) {

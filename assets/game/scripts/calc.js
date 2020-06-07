@@ -18,7 +18,7 @@ cc.Class({
 
     myAdd() {
         this.buttonAudio.play();
-        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
         rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
         rootNode.getChildByName('oper2').setPosition(0, 0);
         rootNode.getChildByName('oper2').active = true;
@@ -28,7 +28,7 @@ cc.Class({
 
     mySub() {
         this.buttonAudio.play();
-        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
         rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
         rootNode.getChildByName('oper2').setPosition(0, 0);
         rootNode.getChildByName('oper2').active = true;
@@ -38,7 +38,7 @@ cc.Class({
 
     myMul() {
         this.buttonAudio.play();
-        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
         rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
         rootNode.getChildByName('oper2').setPosition(0, 0);
         rootNode.getChildByName('oper2').active = true;
@@ -48,7 +48,7 @@ cc.Class({
 
     myDiv() {
         this.buttonAudio.play();
-        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
         rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
         rootNode.getChildByName('oper2').setPosition(0, 0);
         rootNode.getChildByName('oper2').active = true;
@@ -58,7 +58,7 @@ cc.Class({
 
     myMod() {
         this.buttonAudio.play();
-        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
         rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
         rootNode.getChildByName('oper2').setPosition(0, 0);
         rootNode.getChildByName('oper2').active = true;
@@ -68,7 +68,7 @@ cc.Class({
 
     myEqual() {
         this.buttonAudio.play();
-        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
         rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
         rootNode.getChildByName('oper2').setPosition(0, 0);
         rootNode.getChildByName('oper2').active = true;
@@ -78,7 +78,7 @@ cc.Class({
 
     myGt() {
         this.buttonAudio.play();
-        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
         rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
         rootNode.getChildByName('oper2').setPosition(0, 0);
         rootNode.getChildByName('oper2').active = true;
@@ -88,7 +88,7 @@ cc.Class({
 
     myLt() {
         this.buttonAudio.play();
-        topNodeZIndex = (topNodeZIndex + 1) % 999999;
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
         rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
         rootNode.getChildByName('oper2').setPosition(0, 0);
         rootNode.getChildByName('oper2').active = true;

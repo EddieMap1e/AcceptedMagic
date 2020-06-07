@@ -3,6 +3,7 @@ cc.Class({
 
     properties: {
         clickAudio: cc.AudioSource,
+        funcNode: cc.Node,
     },
 
     start() {
@@ -11,7 +12,10 @@ cc.Class({
 
     onClick() {
         this.clickAudio.play();
-        cc.log('starBar被点击了');
-        myTalk();
+        this.funcNode.active = !this.funcNode.active;
+        if (this.funcNode.active) {
+            topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
+            this.funcNode.zIndex = topNodeZIndex;
+        }
     }
 });
