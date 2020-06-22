@@ -24,4 +24,14 @@ cc.Class({
         rootNode.getChildByName('getBall').active = true;
         this.node.active = false;
     },
+
+    getMid(){
+        this.buttonAudio.play();
+        topNodeZIndex = (topNodeZIndex + 1) % cc.macro.MAX_ZINDEX;
+        rootNode.getChildByName('oper2').zIndex = topNodeZIndex;
+        rootNode.getChildByName('oper2').setPosition(0, 0);
+        rootNode.getChildByName('oper2').active = true;
+        rootNode.getChildByName('oper2').getComponent('oper').changeMode('mid');
+        this.node.active = false;
+    }
 });

@@ -3,7 +3,8 @@ cc.Class({
 
     properties: {
         level1: 0,
-        ac2Star:cc.Node
+        ac2Star:cc.Node,
+        ac3Star:cc.Node,
     },
 
     start() {
@@ -18,6 +19,7 @@ cc.Class({
             if (star2!=0) this.node.getChildByName('star2').getComponent(cc.Button).interactable = true;
             if (star3!=0) this.node.getChildByName('star3').getComponent(cc.Button).interactable = true;
             if(cc.sys.localStorage.getItem('ac2')=='get')this.ac2Star.active=true;
+            if(cc.sys.localStorage.getItem('ac3')=='get')this.ac3Star.active=true;
         }
     },
 });

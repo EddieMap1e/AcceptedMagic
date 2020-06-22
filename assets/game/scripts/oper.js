@@ -64,6 +64,10 @@ cc.Class({
             if (data1 < data2) myAlert('感知了一下,左边的的确弱点呢~');
             else myAlert("还行,感知到了失败的结果");
             myAddTime(1);
+        } else if (this.mode == 'mid') {
+            if (this.secret) this.bagNode.getComponent('bag').addSecretStone(Math.floor((data1 + data2)/2));
+            else this.bagNode.getComponent('bag').addMagicBall(Math.floor((data1 + data2)/2));
+            myAddTime(2);
         }
         this.node.active = false;
     },

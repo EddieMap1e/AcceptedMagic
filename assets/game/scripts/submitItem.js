@@ -12,7 +12,6 @@ cc.Class({
 
     setItem(itemNode) {
         if (this.item != null) this.item.destroy();
-        cc.log(itemNode.name);
         if (itemNode.name == 'magicball') {
             this.itemAudio.play();
             this.item = cc.instantiate(itemNode);

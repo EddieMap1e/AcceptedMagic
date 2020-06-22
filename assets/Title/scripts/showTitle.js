@@ -11,6 +11,7 @@ cc.Class({
             type: cc.AudioClip
         },
         particle: cc.ParticleSystem,
+        loadsub: 0,
     },
 
     onLoad() {
@@ -23,25 +24,25 @@ cc.Class({
         }, this);
         let action = cc.sequence(cc.fadeIn(3.0), afterShowTitle1);
         this.title1.runAction(action);
-        cc.loader.downloader.loadSubpackage('game',(err)=>{
-            if(err){
-                return console.log(err);
+        cc.loader.downloader.loadSubpackage('game', (err) => {
+            if (err) {
+                this.loadsub = -1;
             }
-            console.log('successfully load game');
+            this.loadsub++;
         });
-        cc.loader.downloader.loadSubpackage('result',(err)=>{
-            if(err){
-                return console.log(err);
+        cc.loader.downloader.loadSubpackage('result', (err) => {
+            if (err) {
+                this.loadsub = -1;
             }
-            console.log('successfully load result');
+            this.loadsub++;
         });
-        cc.loader.downloader.loadSubpackage('select',(err)=>{
-            if(err){
-                return console.log(err);
+        cc.loader.downloader.loadSubpackage('select', (err) => {
+            if (err) {
+                this.loadsub = -1;
             }
-            console.log('successfully load select');
+            this.loadsub++;
         });
-        cc.sys.localStorage.setItem('unlock0','yes');
+        cc.sys.localStorage.setItem('unlock0', 'yes');
     },
 
     showTitle2() {
@@ -57,14 +58,16 @@ cc.Class({
             this.particle.resetSystem();
             this.enterFlag = false;
             this.node.on('touchstart', () => {
-                clearInterval(this.enterInterval);
-                cc.audioEngine.stop(this.bgm);
-                if (cc.sys.localStorage.getItem('level0') == null || cc.sys.localStorage.getItem('level0') == 0) {
-                    cc.sys.localStorage.setItem('level0','0');
-                    cc.director.loadScene('level0');
-                } else {
-                    cc.director.loadScene('select');
-                }
+                if (this.loadsub == 3) {
+                    clearInterval(this.enterInterval);
+                    cc.audioEngine.stop(this.bgm);
+                    if (cc.sys.localStorage.getItem('level0') == null || cc.sys.localStorage.getItem('level0') == 0) {
+                        cc.sys.localStorage.setItem('level0', '0');
+                        cc.director.loadScene('level0');
+                    } else {
+                        cc.director.loadScene('select');
+                    }
+                } else return;
             }, this);
             this.enterInterval = setInterval(() => {
                 this.flag = !this.flag;
@@ -75,4 +78,10 @@ cc.Class({
         let action = cc.sequence(cc.fadeIn(1.5), afterShowTitle3);
         this.title3.runAction(action);
     },
+
+    update() {
+        if (this.loadsub == 3) {
+            this.enterLabel.string = "点击屏幕任意处进入游戏";
+        }
+    }
 });

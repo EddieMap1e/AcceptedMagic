@@ -57,7 +57,7 @@
     "_is3DNode": true,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "autoReleaseAssets": false,
+    "autoReleaseAssets": true,
     "_id": "334e9037-e7da-4db1-9ace-5389704242e4"
   },
   {
@@ -186,7 +186,7 @@
       "array": [
         0,
         0,
-        292.7165864791403,
+        286.3771856550299,
         0,
         0,
         0,
@@ -498,8 +498,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 648,
-      "height": 207
+      "width": 646,
+      "height": 202
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -511,7 +511,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        506.5,
+        509,
         0,
         0,
         0,
@@ -563,8 +563,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 89,
-      "height": 93
+      "width": 96,
+      "height": 104
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -575,8 +575,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -199.5,
-        -143,
+        -195,
+        -151,
         0,
         0,
         0,
@@ -687,8 +687,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 358,
-      "height": 186
+      "width": 386,
+      "height": 204
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -699,8 +699,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        95,
-        -239.5,
+        80,
+        -251,
         0,
         0,
         0,
@@ -870,8 +870,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 440,
-      "height": 50.4
+      "width": 261.3,
+      "height": 63
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -921,10 +921,10 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "点击屏幕任意处进入游戏",
-    "_N$string": "点击屏幕任意处进入游戏",
-    "_fontSize": 40,
-    "_lineHeight": 40,
+    "_string": "Loading......",
+    "_N$string": "Loading......",
+    "_fontSize": 50,
+    "_lineHeight": 50,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -953,7 +953,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 80,
+    "_bottom": 73.7,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -1221,6 +1221,7 @@
     "particle": {
       "__id__": 23
     },
+    "loadsub": 0,
     "_id": "f3cLsJcaFH1piD4R0ebtjk"
   }
 ]

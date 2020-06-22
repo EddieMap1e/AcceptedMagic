@@ -65,7 +65,7 @@ cc.Class({
     },
 
     onTouchEnd(event) {
-        if (this.node.parent.group == 'bagItem') this.bagScrollView.vertical = true;
+        if (this.node.group == 'bagItem') this.bagScrollView.vertical = true;
         let movePos = event.getLocation();
         let dis = this.startPos.sub(movePos).mag();
         if (dis <= 20) this.onClick();

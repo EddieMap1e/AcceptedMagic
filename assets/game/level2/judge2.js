@@ -20,28 +20,26 @@ cc.Class({
             return;
         }
         let submitNum=submit.itemData;
-        if(submitNum==level1Target){
-            let level1=cc.sys.localStorage.getItem('level1');
-            if(level1==null)level1=0;
-            else level1=parseInt(level1);
-            level1|=1;
-            if(timeScore<=30)level1|=2;
-            if(timeScore<=20)level1|=4;
-            cc.sys.localStorage.setItem('level1',level1);
-            if(timeScore<=10)cc.sys.localStorage.setItem('ac2','get');
-            if(timeScore>=50)cc.sys.localStorage.setItem('ac3','get');
+        if(submitNum==level2Target){
+            let level2=cc.sys.localStorage.getItem('level2');
+            if(level2==null)level2=0;
+            else level2=parseInt(level2);
+            level2|=1;
+            if(timeScore<=55)level2|=2;
+            if(timeScore<=45&&maxSpaceScore<=5)level2|=4;
+            cc.sys.localStorage.setItem('level2',level2);
+            if(timeScore<=20)cc.sys.localStorage.setItem('ac4','get');
+            if(timeScore>=80)cc.sys.localStorage.setItem('ac5','get');
             cc.sys.localStorage.setItem('res','AC');
-            cc.sys.localStorage.setItem('unlock2','yes');
-            cc.sys.localStorage.setItem('unlock3','yes');
             cc.sys.localStorage.setItem('finalTime',timeScore);
             cc.sys.localStorage.setItem('finalSpace',maxSpaceScore);
-            cc.director.loadScene('result1');
+            cc.director.loadScene('result2');
         }
         else {
             cc.sys.localStorage.setItem('res','WA');
             cc.sys.localStorage.setItem('finalTime',timeScore);
             cc.sys.localStorage.setItem('finalSpace',maxSpaceScore);
-            cc.director.loadScene('result1');
+            cc.director.loadScene('result2');
         }
     }
 });

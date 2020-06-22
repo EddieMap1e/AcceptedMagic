@@ -20,9 +20,8 @@ cc.Class({
             else level0=parseInt(level0);
             level0|=1;
             if(timeScore<=8)level0|=2;
-            if(maxSpaceScore<=8)level0|=5;
+            if(maxSpaceScore<=8)level0|=4;
             cc.sys.localStorage.setItem('level0',level0);
-            cc.log(cc.sys.localStorage.getItem('level0'));
             if(timeScore<=4&&maxSpaceScore<=3)cc.sys.localStorage.setItem('ac1','get');
             cc.sys.localStorage.setItem('res','AC');
             cc.sys.localStorage.setItem('unlock1','yes');
