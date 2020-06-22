@@ -8,7 +8,7 @@ cc.Class({
 
     start() {
         this.timeLabel.string = 0;
-        this.spaceLabel.string = 0;
+        this.spaceLabel.string = "0 / 0";
     },
 
     addTimeScore(x) {
@@ -19,10 +19,9 @@ cc.Class({
 
     addSpaceScore(x) {
         let t = spaceScore + x;
-        if (t > maxSpaceScore) {
+        if (t > maxSpaceScore)
             maxSpaceScore = t;
-            this.spaceLabel.string = t;
-        }
+        this.spaceLabel.string = t + " / " + maxSpaceScore;
         spaceScore += x;
     }
 });

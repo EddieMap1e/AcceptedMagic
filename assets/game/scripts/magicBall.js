@@ -94,7 +94,7 @@ cc.Class({
     deleteItem() {
         if (this.copyItem != null) this.copyItem.destroy();
         this.node.parent.parent.destroy();
-        mySubSpace(1);
+        myAddSpace(-1);
     },
 
     onClick() {

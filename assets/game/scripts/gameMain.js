@@ -56,9 +56,5 @@ cc.Class({
 
     myAddSpace(x) {
         rootNode.getChildByName('score').getComponent('score').addSpaceScore(x);
-    },
-
-    mySubSpace(x) {
-        spaceScore -= x;
     }
 });

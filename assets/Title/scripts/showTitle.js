@@ -23,6 +23,25 @@ cc.Class({
         }, this);
         let action = cc.sequence(cc.fadeIn(3.0), afterShowTitle1);
         this.title1.runAction(action);
+        cc.loader.downloader.loadSubpackage('game',(err)=>{
+            if(err){
+                return console.log(err);
+            }
+            console.log('successfully load game');
+        });
+        cc.loader.downloader.loadSubpackage('result',(err)=>{
+            if(err){
+                return console.log(err);
+            }
+            console.log('successfully load result');
+        });
+        cc.loader.downloader.loadSubpackage('select',(err)=>{
+            if(err){
+                return console.log(err);
+            }
+            console.log('successfully load select');
+        });
+        cc.sys.localStorage.setItem('unlock0','yes');
     },
 
     showTitle2() {
@@ -41,6 +60,7 @@ cc.Class({
                 clearInterval(this.enterInterval);
                 cc.audioEngine.stop(this.bgm);
                 if (cc.sys.localStorage.getItem('level0') == null || cc.sys.localStorage.getItem('level0') == 0) {
+                    cc.sys.localStorage.setItem('level0','0');
                     cc.director.loadScene('level0');
                 } else {
                     cc.director.loadScene('select');
