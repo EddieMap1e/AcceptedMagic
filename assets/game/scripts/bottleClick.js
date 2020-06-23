@@ -11,6 +11,6 @@ cc.Class({
 
     onClick(){
         this.clickAudio.play();
-        cc.log('bottle被点击了');
+        rootNode.getChildByName('array').active = !rootNode.getChildByName('array').active;
     }
 });

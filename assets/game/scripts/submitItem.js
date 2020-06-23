@@ -10,10 +10,10 @@ cc.Class({
         this.itemData = null;
     },
 
-    setItem(itemNode) {
+    setItem(itemNode, audio = true) {
         if (this.item != null) this.item.destroy();
         if (itemNode.name == 'magicball') {
-            this.itemAudio.play();
+            if (audio) this.itemAudio.play();
             this.item = cc.instantiate(itemNode);
             this.item.group = 'boxItem';
             this.item.opacity = 255;
@@ -21,9 +21,8 @@ cc.Class({
             this.node.addChild(this.item);
             this.item.setPosition(0, 0);
             this.itemData = this.item.getComponent('magicBall').number;
-        }
-        else if(itemNode.name=='secretStone'){
-            this.itemAudio.play();
+        } else if (itemNode.name == 'secretStone') {
+            if (audio) this.itemAudio.play();
             this.item = cc.instantiate(itemNode);
             this.item.group = 'boxItem';
             this.item.opacity = 255;

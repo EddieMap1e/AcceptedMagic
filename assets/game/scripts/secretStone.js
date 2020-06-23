@@ -14,6 +14,7 @@ cc.Class({
         this.node.on('touchend', this.onTouchEnd, this);
         this.node.on('touchcancel', this.onTouchEnd, this);
         this.worldPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO);
+        this.selectPanel = this.node.getChildByName('selectPanel');
         if (this.node.group == 'bagItem') this.bagScrollView = this.node.parent.parent.parent.parent.getComponent(cc.ScrollView);
     },
 
@@ -54,6 +55,7 @@ cc.Class({
     copyItemMove(event) {
         if (this.node.group == 'bagItem') {
             this.bagScrollView.vertical = false;
+            this.selectPanel.active = false;
         }
         if (this.copyItem == null) return;
         let movePos = event.getLocation();
@@ -75,7 +77,9 @@ cc.Class({
     },
 
     onClick() {
-        if (this.node.parent.group != 'bagItem') return;
+        if (this.node.group != 'bagItem') return;
+        this.selectPanel.active = true;
+        this.node.getComponent(cc.AudioSource).play();
     },
 
     copyItemEnd() {
