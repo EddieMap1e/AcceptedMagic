@@ -63,7 +63,7 @@
     "_is3DNode": true,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "autoReleaseAssets": false,
+    "autoReleaseAssets": true,
     "_id": "d30c3dc8-91ff-4d4e-824e-629d60486a3d"
   },
   {
@@ -210,7 +210,7 @@
       "array": [
         0,
         0,
-        286.3771856550299,
+        286.3653382135295,
         0,
         0,
         0,
@@ -988,7 +988,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "5cGtIY1qJEzK8catpD9N0r"
+    "_id": "1dpTKdgoRC5bTiJyGhbkxD"
   },
   {
     "__type__": "cc.Node",
@@ -1057,7 +1057,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "5euimcvpNCkblr+l1hFN6h"
+    "_id": "5a6lzWDMpIcbB1ajpV5Dim"
   },
   {
     "__type__": "cc.Node",
@@ -1119,7 +1119,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "0bPwXX5tdBRa/uOQ6dq4oJ"
+    "_id": "51oYGGxd1PBbbz+Zsre0lf"
   },
   {
     "__type__": "cc.Label",
@@ -1135,8 +1135,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "获得与 神秘石 法力值相等的 魔法球",
-    "_N$string": "获得与 神秘石 法力值相等的 魔法球",
+    "_string": "得出神秘石的法力值 且 总施法时间 小于等于 50",
+    "_N$string": "得出神秘石的法力值 且 总施法时间 小于等于 50",
     "_fontSize": 50,
     "_lineHeight": 100,
     "_enableWrapText": false,
@@ -1151,7 +1151,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 2,
     "_N$cacheMode": 0,
-    "_id": "9e9P1ZuMZDP4FdBOlsEqNf"
+    "_id": "dfQuoOEjVE6bNacSQZ7vRs"
   },
   {
     "__type__": "cc.Sprite",
@@ -1183,7 +1183,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "7cieI/kxpM+praxvxg0LXe"
+    "_id": "63qLGughtJA5J7PvSSEhCl"
   },
   {
     "__type__": "cc.Button",
@@ -1255,7 +1255,7 @@
     "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": null,
-    "_id": "76zJqqi61DeLF1knjImvEW"
+    "_id": "7eXPhs2mlAxoKVPhuwfuTl"
   },
   {
     "__type__": "cc.Node",
@@ -1324,7 +1324,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "cd8eJtg/FFRoJmHzQcpOOq"
+    "_id": "f52thMATxLG58MqhFn8q8D"
   },
   {
     "__type__": "cc.Node",
@@ -1386,7 +1386,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "ff7R0YTxxDR4z42KWFN6fl"
+    "_id": "b4IPJ6KHtMJZS4NTewoQBT"
   },
   {
     "__type__": "cc.Label",
@@ -1402,8 +1402,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "总施法时间 小于等于 45",
-    "_N$string": "总施法时间 小于等于 45",
+    "_string": "总施法时间 小于等于 30",
+    "_N$string": "总施法时间 小于等于 30",
     "_fontSize": 50,
     "_lineHeight": 100,
     "_enableWrapText": false,
@@ -1418,7 +1418,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 2,
     "_N$cacheMode": 0,
-    "_id": "b9SiYzCJtDDK1d1rTNrjRW"
+    "_id": "0d1ShoGVpIUJfnYOqdW7uz"
   },
   {
     "__type__": "cc.Sprite",
@@ -1450,7 +1450,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "36spRNsL5IMohWXaqOaY6J"
+    "_id": "942GkRMWhKdr11un4z2E30"
   },
   {
     "__type__": "cc.Button",
@@ -1522,7 +1522,7 @@
     "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": null,
-    "_id": "56m6shdQxBLr6JHFyrbVsA"
+    "_id": "ff+KpznXlHnoV77ZzgHI57"
   },
   {
     "__type__": "cc.Node",
@@ -1591,7 +1591,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "c3bd1QyaFFiKrJY01Ryi1W"
+    "_id": "07T9kMVllFBalPNt3tFV2h"
   },
   {
     "__type__": "cc.Node",
@@ -1653,7 +1653,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "aemznEQPVEcouuJrXs+sxI"
+    "_id": "43CP+ourZIcIZmXoQ6oYV7"
   },
   {
     "__type__": "cc.Label",
@@ -1669,8 +1669,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "总施法时间 小于等于 35",
-    "_N$string": "总施法时间 小于等于 35",
+    "_string": "总施法时间 小于等于 20 且 最大空间 小于等于 5",
+    "_N$string": "总施法时间 小于等于 20 且 最大空间 小于等于 5",
     "_fontSize": 50,
     "_lineHeight": 100,
     "_enableWrapText": false,
@@ -1685,7 +1685,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 2,
     "_N$cacheMode": 0,
-    "_id": "25U9KUR3BKibTtxOXruwYj"
+    "_id": "3eD7O/ZhxNF66vGPn3MDcT"
   },
   {
     "__type__": "cc.Sprite",
@@ -1717,7 +1717,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "7eHnQOcQNNw4paf9+FYXsn"
+    "_id": "c6AilVLNJFSr78FH62nVnV"
   },
   {
     "__type__": "cc.Button",
@@ -1789,7 +1789,7 @@
     "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": null,
-    "_id": "43d8MiwaVF1oPU6RK6KcI5"
+    "_id": "29tRrt+ThDsKsZ3ZZNY3dF"
   },
   {
     "__type__": "cc.Node",
@@ -1855,7 +1855,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "58MF+nngNOzbRyLaF97y4j"
+    "_id": "e1vpb4DzpHdpG3qSDsA3FV"
   },
   {
     "__type__": "cc.Node",
@@ -1921,7 +1921,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "b9agjmPVRNwb6v1z08R9xv"
+    "_id": "22xYe7EyNMPI8sTT7Ph9O0"
   },
   {
     "__type__": "cc.Node",
@@ -1990,7 +1990,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "d8rq7TbA1KiJi/QM6bNnyf"
+    "_id": "88io1DqEZO9a+8w8XAEd+c"
   },
   {
     "__type__": "cc.Node",
@@ -2061,7 +2061,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "0aExsC+L1E9pJt8M2iTrEc"
+    "_id": "59fLhYWaRJhaJGBlVmvNXn"
   },
   {
     "__type__": "cc.Node",
@@ -2123,7 +2123,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "b7jDGZ8iFFaLMSoUNKFPMf"
+    "_id": "48o3sD/KJOr452S/hxSG89"
   },
   {
     "__type__": "cc.Sprite",
@@ -2155,7 +2155,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "63EC3oB0dPEIXXiAxkrsB3"
+    "_id": "0dR3SQyMRDTKx6hO6z7cgm"
   },
   {
     "__type__": "cc.Node",
@@ -2217,7 +2217,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "d7IsdVBpREZoLX9A9Zkij3"
+    "_id": "f9uX0eqHZPW4Ao8owk6fNC"
   },
   {
     "__type__": "cc.Label",
@@ -2249,7 +2249,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "f7aTB7b3tFuqiXyazUdjJa"
+    "_id": "aa6EykcVNFx7+Qup67jg1s"
   },
   {
     "__type__": "cc.Node",
@@ -2311,7 +2311,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "4aU8bbTBxOpZ8Z/KopzR01"
+    "_id": "b45o2AKPtLGqZgw4vkvobu"
   },
   {
     "__type__": "cc.Label",
@@ -2327,8 +2327,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "总施法时间 小于等于 20",
-    "_N$string": "总施法时间 小于等于 20",
+    "_string": "总施法时间 小于等于 10",
+    "_N$string": "总施法时间 小于等于 10",
     "_fontSize": 20,
     "_lineHeight": 24,
     "_enableWrapText": true,
@@ -2343,7 +2343,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 2,
     "_N$cacheMode": 0,
-    "_id": "f7/g3br7VEarbTZ3KID8m5"
+    "_id": "2flJEE/RxME6D/ayDOZi80"
   },
   {
     "__type__": "cc.Node",
@@ -2405,7 +2405,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "cex+CY1v5N745UAD0H9Lax"
+    "_id": "d62mybUqBITI1C0xgSk6bK"
   },
   {
     "__type__": "cc.Sprite",
@@ -2437,7 +2437,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "d6clIuT6hNX6Se2gCHagme"
+    "_id": "74g4Y5KEBBSLG+lFwWZoHW"
   },
   {
     "__type__": "cc.Node",
@@ -2508,7 +2508,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "2fe0qHPbBBrZnRNHXm75zv"
+    "_id": "c3Lbd0DjJKz7PyyUkcB4Uq"
   },
   {
     "__type__": "cc.Node",
@@ -2570,7 +2570,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "07R6/oMdpMuqgikJ133OwB"
+    "_id": "348C73C45IpI2fm6sc0OMI"
   },
   {
     "__type__": "cc.Sprite",
@@ -2602,7 +2602,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "ccQW5PjAZORJzj3g8Mghyh"
+    "_id": "e0G7CBDDxNoKKRxa/qj6Iv"
   },
   {
     "__type__": "cc.Node",
@@ -2664,7 +2664,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "3aFyozUedFm5wD9McfAywA"
+    "_id": "d8Nqu5Bq5JMpIRBuXD5u7v"
   },
   {
     "__type__": "cc.Label",
@@ -2696,7 +2696,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "b5AyAcDwxFPI7c+X+RJo+9"
+    "_id": "ab7RnPTwRIG63dy5dAO0Zq"
   },
   {
     "__type__": "cc.Node",
@@ -2758,7 +2758,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "bd2Iqc9GBM5a0PqMymreAL"
+    "_id": "7d29LalBdFWYrVb7RZw2Wc"
   },
   {
     "__type__": "cc.Label",
@@ -2774,8 +2774,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "总施法时间 大于等于 100",
-    "_N$string": "总施法时间 大于等于 100",
+    "_string": "总施法时间 大于等于 40",
+    "_N$string": "总施法时间 大于等于 40",
     "_fontSize": 20,
     "_lineHeight": 24,
     "_enableWrapText": true,
@@ -2790,7 +2790,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 2,
     "_N$cacheMode": 0,
-    "_id": "6bJv2eIitGYYZKDSdo+4lP"
+    "_id": "1a+XPzf6tEXYu8RHZ17baJ"
   },
   {
     "__type__": "cc.Node",
@@ -2852,7 +2852,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "14IWHaMM5BjIg/kIgk8WAF"
+    "_id": "15CuvwjFNI9KJGXchRTcnI"
   },
   {
     "__type__": "cc.Sprite",
@@ -2884,7 +2884,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "b9UCVoTY9NlZz2sBKrZbna"
+    "_id": "dc6IfzSi5Np64N1eBHb7zo"
   },
   {
     "__type__": "cc.Layout",
@@ -2917,7 +2917,7 @@
     "_N$verticalDirection": 1,
     "_N$horizontalDirection": 0,
     "_N$affectedByScale": false,
-    "_id": "f8I4/9GwlCJI3ONmei278d"
+    "_id": "45kmIIrHNLCoZ7UbM4wRzU"
   },
   {
     "__type__": "cc.Mask",
@@ -2937,7 +2937,7 @@
     "_segments": 64,
     "_N$alphaThreshold": 0,
     "_N$inverted": false,
-    "_id": "80RKbTeJVPg5DVWPRJjcOf"
+    "_id": "c8oCaNc4hN9JyoeN/pPs+S"
   },
   {
     "__type__": "cc.ScrollView",
@@ -2963,7 +2963,7 @@
     },
     "_N$horizontalScrollBar": null,
     "_N$verticalScrollBar": null,
-    "_id": "92Pbwss3pEZqFq79YXJRzI"
+    "_id": "2erE1ZghBDFLEErYiaFILW"
   },
   {
     "__type__": "cc.Sprite",
@@ -2995,7 +2995,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "1a+UObok5CdrA8iNTTY5AL"
+    "_id": "d5kD21MZRAiJKNwaBNUHuR"
   },
   {
     "__type__": "f27bebPUt9CgrwnIFFscG/u",
@@ -3012,7 +3012,7 @@
     "ac5Star": {
       "__id__": 54
     },
-    "_id": "f9OSIVaoZMtJ0sai/VzyC0"
+    "_id": "44EBw4EWhKCasYBaRSMJgC"
   },
   {
     "__type__": "cc.Node",

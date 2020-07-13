@@ -25,11 +25,11 @@ cc.Class({
             if(level1==null)level1=0;
             else level1=parseInt(level1);
             level1|=1;
-            if(timeScore<=30)level1|=2;
-            if(timeScore<=20)level1|=4;
+            if(timeScore<=20)level1|=2;
+            if(timeScore<=15)level1|=4;
             cc.sys.localStorage.setItem('level1',level1);
-            if(timeScore<=10)cc.sys.localStorage.setItem('ac2','get');
-            if(timeScore>=50)cc.sys.localStorage.setItem('ac3','get');
+            if(timeScore<=8)cc.sys.localStorage.setItem('ac2','get');
+            if(timeScore>=30)cc.sys.localStorage.setItem('ac3','get');
             cc.sys.localStorage.setItem('res','AC');
             cc.sys.localStorage.setItem('unlock2','yes');
             cc.sys.localStorage.setItem('unlock3','yes');

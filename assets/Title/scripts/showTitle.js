@@ -12,6 +12,7 @@ cc.Class({
         },
         particle: cc.ParticleSystem,
         loadsub: 0,
+        failcnt: 0,
     },
 
     onLoad() {
@@ -24,23 +25,14 @@ cc.Class({
         }, this);
         let action = cc.sequence(cc.fadeIn(3.0), afterShowTitle1);
         this.title1.runAction(action);
+        cc.loader.downloader.loadSubpackage('select', (err) => {
+            this.loadSelectFail(err);
+        });
         cc.loader.downloader.loadSubpackage('game', (err) => {
-            if (err) {
-                this.loadsub = -1;
-            }
-            this.loadsub++;
+            this.loadGameFail(err);
         });
         cc.loader.downloader.loadSubpackage('result', (err) => {
-            if (err) {
-                this.loadsub = -1;
-            }
-            this.loadsub++;
-        });
-        cc.loader.downloader.loadSubpackage('select', (err) => {
-            if (err) {
-                this.loadsub = -1;
-            }
-            this.loadsub++;
+            this.loadResultFail(err);
         });
         cc.sys.localStorage.setItem('unlock0', 'yes');
     },
@@ -58,7 +50,7 @@ cc.Class({
             this.particle.resetSystem();
             this.enterFlag = false;
             this.node.on('touchstart', () => {
-                if (this.loadsub == 3) {
+                if (this.loadsub >= 3) {
                     clearInterval(this.enterInterval);
                     cc.audioEngine.stop(this.bgm);
                     if (cc.sys.localStorage.getItem('level0') == null || cc.sys.localStorage.getItem('level0') == 0) {
@@ -80,8 +72,43 @@ cc.Class({
     },
 
     update() {
-        if (this.loadsub == 3) {
+        if (this.loadsub >= 3) {
             this.enterLabel.string = "点击屏幕任意处进入游戏";
-        }
-    }
+        } else if (this.failcnt >= 50) {
+            this.enterLabel.string = "加载子包失败,请检查网络连接...";
+        } else this.enterLabel.string = "Loading...... " + this.loadsub * 33 + "%";
+    },
+
+    loadSelectFail(er) {
+        if (er) {
+            this.failcnt++;
+            cc.loader.downloader.loadSubpackage('select', (err) => {
+                setTimeout(() => {
+                    this.loadSelectFail(err);
+                }, 500);
+            });
+        } else this.loadsub++;
+    },
+
+    loadGameFail(er) {
+        if (er) {
+            this.failcnt++;
+            cc.loader.downloader.loadSubpackage('game', (err) => {
+                setTimeout(() => {
+                    this.loadGameFail(err);
+                }, 500);
+            });
+        } else this.loadsub++;
+    },
+
+    loadResultFail(er) {
+        if (er) {
+            this.failcnt++;
+            cc.loader.downloader.loadSubpackage('result', (err) => {
+                setTimeout(() => {
+                    this.loadResultFail(err);
+                }, 500);
+            });
+        } else this.loadsub++;
+    },
 });

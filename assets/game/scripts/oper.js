@@ -65,10 +65,24 @@ cc.Class({
             else myAlert("还行,感知到了失败的结果");
             myAddTime(1);
         } else if (this.mode == 'mid') {
-            if (this.secret) this.bagNode.getComponent('bag').addSecretStone(Math.floor((data1 + data2)/2));
-            else this.bagNode.getComponent('bag').addMagicBall(Math.floor((data1 + data2)/2));
+            if (this.secret) this.bagNode.getComponent('bag').addSecretStone(Math.floor((data1 + data2) / 2));
+            else this.bagNode.getComponent('bag').addMagicBall(Math.floor((data1 + data2) / 2));
             myAddTime(2);
+        } else if (this.mode == 'gcd') {
+            if (this.secret) this.bagNode.getComponent('bag').addSecretStone(this.gcd(data1,data2));
+            else this.bagNode.getComponent('bag').addMagicBall(this.gcd(data1,data2))
+            myAddTime(3);
         }
         this.node.active = false;
+    },
+
+    gcd(a, b) {
+        var t;
+        while (b != 0) {
+            t = b;
+            b = a % b;
+            a = t;
+        }
+        return a;
     },
 });

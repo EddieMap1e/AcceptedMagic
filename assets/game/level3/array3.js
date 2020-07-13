@@ -16,7 +16,6 @@ cc.Class({
     },
 
     start() {
-        cc.log(level3Arr);
         let secretStone = cc.instantiate(this.secretStonePrefab);
         secretStone.getComponent('secretStone').init(level3Arr[1]);
         this.arr1.getComponent('submitItem').setItem(secretStone, false);
@@ -39,48 +38,56 @@ cc.Class({
     get1() {
         this.clickAudio.play();
         this.bag.getComponent('bag').addSecretStone(level3Arr[1]);
+        myAddTime(1);
         this.node.active = false;
     },
 
     get2() {
         this.clickAudio.play();
         this.bag.getComponent('bag').addSecretStone(level3Arr[2]);
+        myAddTime(1);
         this.node.active = false;
     },
 
     get3() {
         this.clickAudio.play();
         this.bag.getComponent('bag').addSecretStone(level3Arr[3]);
+        myAddTime(1);
         this.node.active = false;
     },
 
     get4() {
         this.clickAudio.play();
         this.bag.getComponent('bag').addSecretStone(level3Arr[4]);
+        myAddTime(1);
         this.node.active = false;
     },
 
     get5() {
         this.clickAudio.play();
         this.bag.getComponent('bag').addSecretStone(level3Arr[5]);
+        myAddTime(1);
         this.node.active = false;
     },
 
     get6() {
         this.clickAudio.play();
         this.bag.getComponent('bag').addSecretStone(level3Arr[6]);
+        myAddTime(1);
         this.node.active = false;
     },
 
     get7() {
         this.clickAudio.play();
         this.bag.getComponent('bag').addSecretStone(level3Arr[7]);
+        myAddTime(1);
         this.node.active = false;
     },
 
     get8() {
         this.clickAudio.play();
         this.bag.getComponent('bag').addSecretStone(level3Arr[8]);
+        myAddTime(1);
         this.node.active = false;
     },
 });

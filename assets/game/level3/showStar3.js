@@ -17,7 +17,7 @@ cc.Class({
             if (star1!=0) this.node.getChildByName('star1').getComponent(cc.Button).interactable = true;
             if (star2!=0) this.node.getChildByName('star2').getComponent(cc.Button).interactable = true;
             if (star3!=0) this.node.getChildByName('star3').getComponent(cc.Button).interactable = true;
-            if(cc.sys.localStorage.getItem('ac6')=='get')this.ac4Star.active=true;
+            if(cc.sys.localStorage.getItem('ac6')=='get')this.ac6Star.active=true;
         }
     },
 });
